@@ -13,7 +13,7 @@ string get_a_target_string()
 
     cout << "target (0~" << RAND_MAX << "): ";
     cin >> target;
-    snprintf(buf, 10, "%d", target);
+    snprintf(buf, 10, "%lu", target);
     return string(buf);
 }
 
