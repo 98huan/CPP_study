@@ -20,7 +20,7 @@ vector<int> BubbleSort(vector<int>& v)
     return v;
 }
 
-// 快速排序：
+// 快速排序：nlogn
 void quickSort(vector<int>& arr, int l, int r){
     if(l >= r)
         return;
