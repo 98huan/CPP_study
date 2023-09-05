@@ -1,50 +1,226 @@
-#基础样式
+# #基础样式
+# BasedOnStyle: Google
+# #指针的*的挨着哪边
+# PointerAlignment: Right
+# #访问修饰符前的空格
+# AccessModifierOffset: -4
+# # 缩进宽度
+# IndentWidth: 4
+# # 连续的空行保留几行
+# MaxEmptyLinesToKeep: 1
+# # 圆括号的换行方式
+# BreakBeforeBraces: Attach
+# # 是否允许短方法单行
+# AllowShortFunctionsOnASingleLine: false
+# # 支持一行的
+# ifAllowShortIfStatementsOnASingleLine: false
+# # 在未封闭(括号的开始和结束不在同一行)的括号中的代码是否对齐
+# AlignAfterOpenBracket: true
+# # switch的case缩进
+# IndentCaseLabels: true
+# # 针对OC的block的缩进宽度
+# ObjCBlockIndentWidth: 4
+# # 针对OC，属性名后加空格
+# ObjCSpaceAfterProperty: true
+# # 每行字符的长度
+# ColumnLimit: 120
+# # 注释对齐
+# AlignTrailingComments: true
+# # 括号后加空格
+# SpaceAfterCStyleCast: false
+# # 换行的时候对齐操作符
+# AlignOperands: true
+# # 中括号两边空格 []
+# SpacesInSquareBrackets: false
+# # 多行声明语句按照=对齐
+# AlignConsecutiveDeclarations: false
+# # 容器类的空格 例如 OC的字典
+# SpacesInContainerLiterals: false
+# # 在构造函数初始化时按逗号断行，并以冒号对齐
+# BreakConstructorInitializersBeforeComma: true
+# # 函数参数换行
+# AllowAllParametersOfDeclarationOnNextLine: true
+# #在续行(# 下一行)时的缩进长度
+# ContinuationIndentWidth: 4
+# # tab键盘的宽度
+# TabWidth: 4
+# # 赋值运算符前加空格
+# SpaceBeforeAssignmentOperators: true
+# # 行尾的注释前加1个空格
+# SpacesBeforeTrailingComments: 1
+
+Language: Cpp
 BasedOnStyle: Google
-#指针的*的挨着哪边
-PointerAlignment: Right
-#访问修饰符前的空格
 AccessModifierOffset: -4
-# 缩进宽度
-IndentWidth: 4
-# 连续的空行保留几行
-MaxEmptyLinesToKeep: 1
-# 圆括号的换行方式
-BreakBeforeBraces: Attach
-# 是否允许短方法单行
-AllowShortFunctionsOnASingleLine: false
-# 支持一行的
-ifAllowShortIfStatementsOnASingleLine: false
-# 在未封闭(括号的开始和结束不在同一行)的括号中的代码是否对齐
-AlignAfterOpenBracket: true
-# switch的case缩进
-IndentCaseLabels: true
-# 针对OC的block的缩进宽度
-ObjCBlockIndentWidth: 4
-# 针对OC，属性名后加空格
-ObjCSpaceAfterProperty: true
-# 每行字符的长度
-ColumnLimit: 120
-# 注释对齐
-AlignTrailingComments: true
-# 括号后加空格
-SpaceAfterCStyleCast: false
-# 换行的时候对齐操作符
-AlignOperands: true
-# 中括号两边空格 []
-SpacesInSquareBrackets: false
-# 多行声明语句按照=对齐
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
-# 容器类的空格 例如 OC的字典
-SpacesInContainerLiterals: false
-# 在构造函数初始化时按逗号断行，并以冒号对齐
-BreakConstructorInitializersBeforeComma: true
-# 函数参数换行
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: true
-#在续行(# 下一行)时的缩进长度
+# AllowShortEnumsOnASingleLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortLambdasOnASingleLine: All
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: true
+BinPackParameters: true
+BraceWrapping:
+    AfterClass: false
+    AfterControlStatement: false
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: false
+    AfterObjCDeclaration: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: false
+    BeforeElse: false
+    IndentBraces: false
+    SplitEmptyFunction: true
+    SplitEmptyRecord: true
+    SplitEmptyNamespace: true
+BreakBeforeBinaryOperators: None
+BreakBeforeBraces: Custom
+BreakBeforeInheritanceComma: false
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializersBeforeComma: false
+BreakConstructorInitializers: BeforeColon
+BreakAfterJavaFieldAnnotations: false
+BreakStringLiterals: true
+ColumnLimit: 120
+CommentPragmas: "^ IWYU pragma:"
+CompactNamespaces: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
-# tab键盘的宽度
-TabWidth: 4
-# 赋值运算符前加空格
+Cpp11BracedListStyle: true
+DerivePointerAlignment: true
+DisableFormat: false
+ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments: true
+# ForEachMacros:
+#     - foreach
+#     - Q_FOREACH
+#     - BOOST_FOREACH
+# IncludeBlocks: Preserve
+# IncludeCategories:
+#     - Regex: '^<ext/.*\.h>'
+#     Priority: 2
+#     - Regex: '^<.*\.h>'
+#     Priority: 1
+#     - Regex: "^<.*"
+#     Priority: 2
+#     - Regex: ".*"
+#     Priority: 3
+IncludeIsMainRegex: "([-_](test|unittest))?$"
+IndentCaseLabels: true
+IndentPPDirectives: None
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+JavaScriptQuotes: Leave
+JavaScriptWrapImports: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+MacroBlockBegin: ""
+MacroBlockEnd: ""
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+ObjCBlockIndentWidth: 4
+ObjCSpaceAfterProperty: true
+ObjCSpaceBeforeProtocolList: false
+PenaltyBreakAssignment: 4
+PenaltyBreakBeforeFirstCallParameter: 1
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 200
+PointerAlignment: Right
+# RawStringFormats:
+#   - Delimiter:       pb
+#     Language:        TextProto
+#     BasedOnStyle:    google
+ReflowComments: true
+SortIncludes: true
+SortUsingDeclarations: true
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
 SpaceBeforeAssignmentOperators: true
-# 行尾的注释前加1个空格
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
 SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: true
+Standard: Auto
+TabWidth: 4
+UseTab: Never
+
+# Language: Cpp：指定语言为 C++。
+# BasedOnStyle: Google：基于 Google 的代码风格。
+# AccessModifierOffset: -4：访问修饰符的缩进量为 -4。
+# AlignAfterOpenBracket: Align：在打开括号后对齐。
+# AlignConsecutiveAssignments: false：不对齐连续的赋值语句。
+# AlignConsecutiveDeclarations: false：不对齐连续的声明语句。
+# AlignEscapedNewlines: Left：对齐转义换行符。
+# AlignOperands: true：对齐操作数。
+# AlignTrailingComments: true：对齐尾随注释。
+# AllowAllParametersOfDeclarationOnNextLine: true：允许所有声明的参数都在下一行。
+# # AllowShortEnumsOnASingleLine: false：注释掉了，不允许在一行中放置短枚举类型。
+# AllowShortBlocksOnASingleLine: false：不允许在一行中放置短块语句。
+# AllowShortCaseLabelsOnASingleLine: false：不允许在一行中放置短 case 标签。
+# AllowShortFunctionsOnASingleLine: Empty：仅当函数为空时，才允许在一行中放置短函数。
+# AllowShortIfStatementsOnASingleLine: false：不允许在一行中放置短 if 语句。
+# AllowShortLoopsOnASingleLine: false：不允许在一行中放置短循环语句。
+# AllowShortLambdasOnASingleLine: All：允许在一行中放置所有短 lambda 表达式。
+# AlwaysBreakAfterDefinitionReturnType: None：定义返回类型后不总是换行。
+# AlwaysBreakAfterReturnType: None：返回类型后不总是换行。
+# AlwaysBreakBeforeMultilineStrings: true：总是在多行字符串前换行。
+# AlwaysBreakTemplateDeclarations: true：总是在模板声明前换行。
+# BinPackArguments: true：在函数调用中尽量将参数打包在一行中。
+# BinPackParameters: true：在函数声明中尽量将参数打包在一行中。
+# BraceWrapping:：大括号换行设置。
+# AfterClass: false：类定义后不换行。
+# AfterControlStatement: false：控制语句后不换行。
+# AfterEnum: false：枚举定义后不换行。
+# AfterFunction: false：函数定义后不换行。
+# AfterNamespace: false：命名空间定义后不换行。
+# AfterObjCDeclaration: false：Objective-C 声明后不换行。
+# AfterStruct: false：结构体定义后不换行。
+# AfterUnion: false：联合体定义后不换行。
+# AfterExternBlock: false：extern 块后不换行。
+# BeforeCatch: false：catch 语句前不换行。
+# BeforeElse: false：else 语句前不换行。
+# IndentBraces: false：缩进大括号。
+# SplitEmptyFunction: true：拆分空函数的大括号。
+# SplitEmptyRecord: true：拆分空记录的大括号。
+# SplitEmptyNamespace: true：拆分空命名空间的大括号。
+# BreakBeforeBinaryOperators: None：二元运算符前不换行。
+# BreakBeforeBraces: Custom：在大括号前换行，具体规则由 BraceWrapping 设置决定。
+# BreakBeforeInheritanceComma: false：继承逗号前不换行。
+# BreakBeforeTernaryOperators: true：三元运算符前换行。
+# BreakConstructorInitializersBeforeComma: false：构造函数初始化列表中的逗号前不换行。
+# BreakConstructorInitializers: BeforeColon：在构造函数初始化列表的冒号前换行。
+# BreakAfterJavaFieldAnnotations: false：Java 字段注解后不换行。
+# BreakStringLiterals: true：拆分字符串字面量。
+# ColumnLimit: 120：每行最多允许 120 个字符。
+# CommentPragmas: "^ IWYU pragma:"：注释中的 pragma 指令，以 IWYU pragma: 开头。
+# CompactNamespaces: false：不压缩命名空间。
+# ConstructorInitializerAllOnOneLineOrOnePerLine: true：构造函数初始化列表要么全部在一行，要么每个初始化项占一行。
+# ConstructorInitializerIndentWidth: 4：构造函数初始化列表的缩进宽度为 4。
+# ContinuationIndentWidth: 4：续行缩进宽度为 4。
+# Cpp11BracedListStyle: true：使用 C++11 风格的花括号列表。
+# DerivePointerAlignment: true：从上下文推断指针对齐方式。
+# DisableFormat: false：不禁用格式化。
+# ExperimentalAutoDetectBinPacking: false：不使用实验性的自动检测二进制打包功能。
+# FixNamespaceComments: true：修复命名空间注释。
